@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <NoWarn>CS0649;CS0169</NoWarn>
+        <NukeRootDirectory>..</NukeRootDirectory>
+        <NukeScriptDirectory>..</NukeScriptDirectory>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NuGet.CommandLine" Version="5.9.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Nuke.Common" Version="5.1.1" />
+        <PackageReference Include="SharpZipLib" Version="1.3.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Directory.Build" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="..\build\**" />
+    </ItemGroup>
+
+</Project>
